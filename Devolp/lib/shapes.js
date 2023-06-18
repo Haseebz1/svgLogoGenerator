@@ -33,3 +33,6 @@ class Circle extends Shape {
 
     }
   }
+
+  module.exports = { Triangle,Square,Circle};
+  
