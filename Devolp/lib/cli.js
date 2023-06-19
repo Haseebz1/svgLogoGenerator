@@ -30,3 +30,40 @@ let userQuestions = [
       message: "Enter a shape color",
     },
   ];
+
+  class CLI {
+    do(){
+      return inquirer.prompt(userQuestions)
+      .then(({ text, textColor, shapeType, shapeColor }) => {
+        let chosenShape;
+        switch (shapeType) {
+          case "circle":
+            chosenShape = new Circle();
+            break;
+
+          case "square":
+            chosenshape = new Square();
+            break;
+
+          default:
+            chosenShape = new Triangle();
+            break;
+        }
+        chosenShape.setColor(shapeColor);
+
+        const logo = new Logo();
+        logo.setText(text, textColor);
+        logo.setShape(chosenShape);
+        return writeFile("userLogo.svg", logo.render());
+      })
+      .then(() => {
+        console.log("Generated userLogo.svg");
+      })
+      .catch((error) => {
+        console.log(error);
+             });
+  }
+
+      }
+      
+    module.exports = CLI;
