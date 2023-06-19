@@ -41,7 +41,7 @@ class CLI {
             break;
 
           case "square":
-            chosenshape = new Square();
+            chosenShape = new Square();
             break;
 
           default:
