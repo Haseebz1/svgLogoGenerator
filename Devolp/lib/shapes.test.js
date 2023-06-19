@@ -1,4 +1,4 @@
-const { Triangle } = require("./shapes");
+const { Triangle, Circle } = require("./shapes");
 
 describe("Triangle", () => {
     test("should render svg logofor a blue polygon element", () => {
@@ -11,3 +11,5 @@ describe("Triangle", () => {
     });
   });
   
+
+    
